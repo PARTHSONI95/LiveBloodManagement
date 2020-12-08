@@ -60,7 +60,7 @@ public class SearchController {
         String searchField = request.getParameter("searchfield");
         String state=null;
         int responseCode = 0;
-        String api = "https://maps.googleapis.com/maps/api/geocode/json?key=AIzaSyDnAwL_NaAcFnNBnP2OaDJS_L8vdAVGSGw&address=" + URLEncoder.encode(searchField, "UTF-8") + "&sensor=true";
+        String api = "https://maps.googleapis.com/maps/api/geocode/json?key=<YOUR_API_KEY>&address=" + URLEncoder.encode(searchField, "UTF-8") + "&sensor=true";
         URL url = new URL(api);
         HttpURLConnection httpConnection = (HttpURLConnection) url.openConnection();
         httpConnection.setRequestMethod("GET");
